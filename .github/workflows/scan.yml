@@ -1,0 +1,28 @@
+name: scan
+
+on:
+  workflow_call:  # Makes this workflow reusable
+    inputs:
+      input1:
+        description: First input variable
+        required: true
+        type: string
+      input2:
+        description: Second input variable
+        required: true
+        type: string
+    secrets:
+      secret_key:
+        description: A secret for authentication
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Inputs
+        run: |
+          echo "Input 1: ${{ inputs.input1 }}"
+          echo "Input 2: ${{ inputs.input2 }}"
+      
+      - name: Use Secret
+        run: echo "Using secret ${{ secrets.secret_key }}"
