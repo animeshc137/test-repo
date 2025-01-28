@@ -5,15 +5,16 @@ on:
     inputs:
       input1:
         description: First input variable
-        required: true
+        required: false
         type: string
       input2:
         description: Second input variable
-        required: true
+        required: false
         type: string
     secrets:
       secret_key:
         description: A secret for authentication
+        required: false
 
 jobs:
   process:
