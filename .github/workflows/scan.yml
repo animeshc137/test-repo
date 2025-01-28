@@ -14,7 +14,6 @@ on:
     secrets:
       secret_key:
         description: A secret for authentication
-        required: false
 
 jobs:
   process:
