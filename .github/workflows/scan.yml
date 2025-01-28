@@ -1,7 +1,7 @@
 name: Workflow 2 in Repo2
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       input1:
         description: First input variable
